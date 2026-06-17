@@ -62,11 +62,7 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Folder Include="Pages\" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Update="Level1.xaml">
+	  <MauiXaml Update="Pages\Level1.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

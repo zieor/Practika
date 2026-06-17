@@ -3,38 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="victorina.MainPage">
 
-    <VerticalStackLayout Margin="10" HorizontalOptions="Start">
+    <VerticalStackLayout Margin="10">
 
+        
+        
         <Label
             Text="Уровень 1"
+            FontSize="20"
+            />
+
+        <Label
+            Text="Описание"
             
-            
+            />
+        
+        <Label
+            Text="Уровень 2" 
+            FontSize="20"
+            />
+
+        <Label
+         Text="Описание"
+         />
+        
+        <Label
+            Text="Уровень 3"
+            FontSize="20"
             />
         <Label
-            Text="Уровень 2"
-    
-    
+         Text="Описание"
+         />
+        
+        <Label
+            Text="Уровень 4"
+            FontSize="20"
             />
         <Label
-            Text="Уровень 2"
-    
-    
+         Text="Описание"
+         />
+        
+        <Label
+            Text="Уровень 5"
+            FontSize="20"
             />
         <Label
-            Text="Уровень 2"
-    
-    
-            />
-        <Label
-            Text="Уровень 2"
-    
-    
-            />
-        <Label
-            Text="Уровень 2"
-    
-    
-            />
+         Text="Описание"
+         />
+
 
 
     </VerticalStackLayout>

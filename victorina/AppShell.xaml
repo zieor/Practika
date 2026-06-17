@@ -3,6 +3,7 @@
     x:Class="victorina.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:pages="clr-namespace:victorina"
     xmlns:local="clr-namespace:victorina"
     Title="victorina">
 
@@ -10,9 +11,10 @@
         Title="Описание сложностей"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
-    <ShellContent
-    Title="Сложность 1"
-    ContentTemplate="{DataTemplate local:Level1}"
-    Route="Level1" />
+  
+    
+    <FlyoutItem Title="Сложность">
+        <ShellContent Route="Level1" ContentTemplate="{DataTemplate pages:Level1}" />
+    </FlyoutItem>
 
 </Shell>
