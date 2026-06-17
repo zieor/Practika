@@ -5,7 +5,7 @@
              Title="Level1">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
+            Text="ВИКТОРИНА"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
     </VerticalStackLayout>
