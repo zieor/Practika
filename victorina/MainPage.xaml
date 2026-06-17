@@ -10,7 +10,32 @@
             
             
             />
-        
+        <Label
+            Text="Уровень 2"
+    
+    
+            />
+        <Label
+            Text="Уровень 2"
+    
+    
+            />
+        <Label
+            Text="Уровень 2"
+    
+    
+            />
+        <Label
+            Text="Уровень 2"
+    
+    
+            />
+        <Label
+            Text="Уровень 2"
+    
+    
+            />
+
 
     </VerticalStackLayout>
 
