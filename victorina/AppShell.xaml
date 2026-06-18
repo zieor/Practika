@@ -13,7 +13,7 @@
         Route="MainPage" />
   
     
-    <FlyoutItem Title="Сложность">
+    <FlyoutItem Title="Уровень 1">
         <ShellContent Route="Level1" ContentTemplate="{DataTemplate pages:Level1}" />
     </FlyoutItem>
 
