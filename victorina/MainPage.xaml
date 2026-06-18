@@ -1,48 +1,69 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="victorina.MainPage">
+             x:Class="victorina.MainPage"
+             BackgroundColor="DarkSlateGrey"
+             >
 
-    <VerticalStackLayout Margin="10">
+
+    <VerticalStackLayout Margin="10" VerticalOptions="End">
+
+        <Label
+            Text="Выбери сложность"
+            TextColor="Red"
+            FontAttributes="Bold"
+            HorizontalOptions="Center"
+            Padding="0 0 250 0"
+            ></Label>
+        
+        
+        
 
         <Button
             Text="Уровень 1"
             Clicked="Button_Clicked1"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
+            BackgroundColor="Wheat"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="0 0 10 0"
             />
+        
 
         <Button
             Text="Уровень 2"
             Clicked="Button_Clicked2"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
+            BackgroundColor="Wheat"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="0 0 10 0"
             />
 
         <Button
             Text="Уровень 3"
             Clicked="Button_Clicked3"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
+            BackgroundColor="Wheat"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="0 0 10 0"
             />
 
         <Button
             Text="Уровень 4"
             Clicked="Button_Clicked4"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
+            BackgroundColor="Wheat"
+            TextColor="Black"
+            FontAttributes="Bold"
+            Margin="0 0 10 0"
             />
 
         <Button
             Text="Уровень 5"
             Clicked="Button_Clicked5"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
+            BackgroundColor="Wheat"
+            TextColor="Black"
+            FontAttributes="Bold"
+
             />
-
-
-
-
 
 
 
