@@ -2,182 +2,116 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="victorina.Level1"
-             Title="Уровень 1">
-    <VerticalStackLayout>
-        <Label 
-            Text="ВИКТОРИНА"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Grid Margin="-50,0,30,0">
-            <Grid.RowDefinitions>
-                <RowDefinition Height="100" />
-                <RowDefinition Height="100" />
-                <RowDefinition Height="100" />
-                <RowDefinition Height="100" />
-                <RowDefinition Height="100" />
-                <RowDefinition Height="100" />
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <!--темы-->
-            <Label Grid.Column="0"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"
-                   Text="Тема"/>
-            <Label Grid.Column="0" Grid.Row="1"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="Кот"/>
-            <Label Grid.Column="0" Grid.Row="2"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="Кот"/>
-            <Label Grid.Column="0" Grid.Row="3"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="Кот"/>
-            <Label Grid.Column="0" Grid.Row="4"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="Кот"/>
-            <Label Grid.Column="0" Grid.Row="5"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="Кот"/>
-            <!--сложность-->
-            <Label Grid.Column="1"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                  
-                   Text="100"/>
-            <Label Grid.Column="2"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="200"/>
-            <Label Grid.Column="3"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="300"/>
-            <Label Grid.Column="4"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="400"/>
-            <Label Grid.Column="5"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Text="500"/>
-            <!--выбор соржности1-->
-            <Button Grid.Column="1" Grid.Row="1"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   Clicked="OnBackButtonClicked"
-                   />
-            <Button Grid.Column="2" Grid.Row="1"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="3" Grid.Row="1"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="4" Grid.Row="1"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="5" Grid.Row="1"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <!--выбор соржности2-->
-            <Button Grid.Column="1" Grid.Row="2"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="2" Grid.Row="2"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="3" Grid.Row="2"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="4" Grid.Row="2"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="5" Grid.Row="2"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <!--выбор соржности3-->
-            <Button Grid.Column="1" Grid.Row="3"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="2" Grid.Row="3"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="3" Grid.Row="3"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="4" Grid.Row="3"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <Button Grid.Column="5" Grid.Row="3"
-                   Margin="40,10,40,10"
-                   Text="вопрос" 
-                   />
-            <!--выбор соржности4-->
-            <Button Grid.Column="1" Grid.Row="4"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="2" Grid.Row="4"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="3" Grid.Row="4"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="4" Grid.Row="4"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="5" Grid.Row="4"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <!--выбор соржности5-->
-            <Button Grid.Column="1" Grid.Row="5"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="2" Grid.Row="5"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="3" Grid.Row="5"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="4" Grid.Row="5"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-            <Button Grid.Column="5" Grid.Row="5"
-       Margin="40,10,40,10"
-       Text="вопрос" 
-       />
-        </Grid>    
-    </VerticalStackLayout>
+             Shell.NavBarIsVisible="False" 
+             NavigationPage.HasNavigationBar="False">
+
+    <Grid>
+        <VerticalStackLayout>
+            <Label 
+                Text="ВИКТОРИНА"
+                FontSize="24"
+                FontAttributes="Bold"
+                Margin="0,15,0,0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Grid Margin="0,0,30,0">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Text="Тема"/>
+                <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
+                <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
+                <Label Grid.Column="0" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
+                <Label Grid.Column="0" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
+                <Label Grid.Column="0" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
+
+                <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Text="100"/>
+                <Label Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Text="200"/>
+                <Label Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Text="300"/>
+                <Label Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Text="400"/>
+                <Label Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" Text="500"/>
+
+                <Button Grid.Column="1" Grid.Row="1" Text="вопрос" Clicked="OnOpenQuizClicked" />
+                <Button Grid.Column="2" Grid.Row="1" Text="вопрос" />
+                <Button Grid.Column="3" Grid.Row="1" Text="вопрос" />
+                <Button Grid.Column="4" Grid.Row="1" Text="вопрос" />
+                <Button Grid.Column="5" Grid.Row="1" Text="вопрос" />
+
+                <Button Grid.Column="1" Grid.Row="2" Text="вопрос" />
+                <Button Grid.Column="2" Grid.Row="2" Text="вопрос" />
+                <Button Grid.Column="3" Grid.Row="2" Text="вопрос" />
+                <Button Grid.Column="4" Grid.Row="2" Text="вопрос" />
+                <Button Grid.Column="5" Grid.Row="2" Text="вопрос" />
+
+                <Button Grid.Column="1" Grid.Row="3" Text="вопрос" />
+                <Button Grid.Column="2" Grid.Row="3" Text="вопрос" />
+                <Button Grid.Column="3" Grid.Row="3" Text="вопрос" />
+                <Button Grid.Column="4" Grid.Row="3" Text="вопрос" />
+                <Button Grid.Column="5" Grid.Row="3" Text="вопрос" />
+
+                <Button Grid.Column="1" Grid.Row="4" Text="вопрос" />
+                <Button Grid.Column="2" Grid.Row="4" Text="вопрос" />
+                <Button Grid.Column="3" Grid.Row="4" Text="вопрос" />
+                <Button Grid.Column="4" Grid.Row="4" Text="вопрос" />
+                <Button Grid.Column="5" Grid.Row="4" Text="вопрос" />
+
+                <Button Grid.Column="1" Grid.Row="5" Text="вопрос" />
+                <Button Grid.Column="2" Grid.Row="5" Text="вопрос" />
+                <Button Grid.Column="3" Grid.Row="5" Text="вопрос" />
+                <Button Grid.Column="4" Grid.Row="5" Text="вопрос" />
+                <Button Grid.Column="5" Grid.Row="5" Text="вопрос" />
+            </Grid>
+        </VerticalStackLayout>
+        
+        <Grid x:Name="QuizModal" IsVisible="False" BackgroundColor="#80000000" IgnoreSafeArea="True">
+            <Border StrokeShape="RoundRectangle 15" 
+                    BackgroundColor="White" 
+                    WidthRequest="340" 
+                    MaximumHeightRequest="600"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" 
+                    Padding="20">
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+
+                        <Image Source="dotnet_bot.png" 
+                               HeightRequest="140" 
+                               WidthRequest="140"
+                               MaximumHeightRequest="160"
+                               Aspect="AspectFit"
+                               HorizontalOptions="Center"/>
+
+                        <Label Text="Сколько планет в Солнечной системе?" 
+                               FontSize="18" 
+                               FontAttributes="Bold" 
+                               HorizontalTextAlignment="Center" 
+                               TextColor="Black"
+                               Margin="5"
+                               LineBreakMode="WordWrap"/>
+
+                        <Button Text="А) 7 планет" Clicked="OnAnswerClicked" CommandParameter="7 планет" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
+                        <Button Text="Б) 8 планет" Clicked="OnAnswerClicked" CommandParameter="8 планет" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
+                        <Button Text="В) 9 планет" Clicked="OnAnswerClicked" CommandParameter="9 планет" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
+
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
+
+    </Grid>
 </ContentPage>
