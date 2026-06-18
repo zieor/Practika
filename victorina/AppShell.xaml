@@ -12,9 +12,5 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
   
-    
-    <FlyoutItem Title="Уровень 1">
-        <ShellContent Route="Level1" ContentTemplate="{DataTemplate pages:Level1}" />
-    </FlyoutItem>
 
 </Shell>

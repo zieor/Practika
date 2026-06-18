@@ -5,50 +5,44 @@
 
     <VerticalStackLayout Margin="10">
 
-        
-        
-        <Label
+        <Button
             Text="Уровень 1"
-            FontSize="20"
+            Clicked="Button_Clicked1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             />
 
-        <Label
-            Text="Описание"
-            
-            />
-        
-        <Label
-            Text="Уровень 2" 
-            FontSize="20"
+        <Button
+            Text="Уровень 2"
+            Clicked="Button_Clicked2"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             />
 
-        <Label
-         Text="Описание"
-         />
-        
-        <Label
+        <Button
             Text="Уровень 3"
-            FontSize="20"
+            Clicked="Button_Clicked3"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             />
-        <Label
-         Text="Описание"
-         />
-        
-        <Label
+
+        <Button
             Text="Уровень 4"
-            FontSize="20"
+            Clicked="Button_Clicked4"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             />
-        <Label
-         Text="Описание"
-         />
-        
-        <Label
+
+        <Button
             Text="Уровень 5"
-            FontSize="20"
+            Clicked="Button_Clicked5"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
             />
-        <Label
-         Text="Описание"
-         />
+
+
+
+
 
 
 
