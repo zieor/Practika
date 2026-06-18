@@ -1,4 +1,4 @@
-using victorina.Pages;
+using victorina;
 
 namespace victorina;
 
@@ -23,11 +23,11 @@ public partial class Level1 : ContentPage
 
         if (selectedAnswer == "8 планет")
         {
-            await DisplayAlert("Правильно!", "Отличный результат!", "Ура");
+            await DisplayAlertAsync("Правильно!", "Отличный результат!", "Ура");
         }
         else
         {
-            await DisplayAlert("Неверно", $"Вы выбрали: {selectedAnswer}.", "ОК");
+            await DisplayAlertAsync("Неверно", $"Вы выбрали: {selectedAnswer}.", "ОК");
         }
     }
 }
