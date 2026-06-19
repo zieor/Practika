@@ -15,17 +15,17 @@
                 VerticalOptions="Center" 
                 HorizontalOptions="Center" />
 
-            <Grid Margin="0,0,30,0">
+            <Grid Margin="10,20,10,0" RowSpacing="5" ColumnSpacing="5">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
-                    <RowDefinition Height="*" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="85" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
@@ -33,85 +33,188 @@
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
 
-                <Label Grid.Column="0" HorizontalOptions="Center" VerticalOptions="Center" Text="Тема"/>
-                <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
-                <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
-                <Label Grid.Column="0" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
-                <Label Grid.Column="0" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
-                <Label Grid.Column="0" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" Text="Кот"/>
+                <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Космос"/>
+                <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Животные"/>
+                <Label Grid.Column="0" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Транспорт"/>
+                <Label Grid.Column="0" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Кино"/>
+                <Label Grid.Column="0" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="История"/>
 
-                <Label Grid.Column="1" VerticalOptions="Center" HorizontalOptions="Center" Text="100"/>
-                <Label Grid.Column="2" VerticalOptions="Center" HorizontalOptions="Center" Text="200"/>
-                <Label Grid.Column="3" VerticalOptions="Center" HorizontalOptions="Center" Text="300"/>
-                <Label Grid.Column="4" VerticalOptions="Center" HorizontalOptions="Center" Text="400"/>
-                <Label Grid.Column="5" VerticalOptions="Center" HorizontalOptions="Center" Text="500"/>
+                <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Тема"/>
+                <Label Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="100"/>
+                <Label Grid.Column="2" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="200"/>
+                <Label Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="300"/>
+                <Label Grid.Column="4" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="400"/>
+                <Label Grid.Column="5" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="500"/>
 
-                <Button Grid.Column="1" Grid.Row="1" Text="вопрос" Clicked="OnOpenQuizClicked" />
-                <Button Grid.Column="2" Grid.Row="1" Text="вопрос" />
-                <Button Grid.Column="3" Grid.Row="1" Text="вопрос" />
-                <Button Grid.Column="4" Grid.Row="1" Text="вопрос" />
-                <Button Grid.Column="5" Grid.Row="1" Text="вопрос" />
+                <Border Grid.Column="1" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Сколько планет в Солнечной системе?|7 планет|8 планет|9 планет|8 планет" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="1" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое животное самое быстрое на суше?|Лев|Гепард|Антилопа|Гепард" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="1" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое двухколесное средство едет без топлива?|Мотоцикл|Скутер|Велосипед|Велосипед" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="1" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какой супергерой носит плащ с летучей мышью?|Человек-паук|Бэтмен|Супермен|Бэтмен" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="1" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="В какой стране построили большие пирамиды?|Греция|Египет|Рим|Египет" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
 
-                <Button Grid.Column="1" Grid.Row="2" Text="вопрос" />
-                <Button Grid.Column="2" Grid.Row="2" Text="вопрос" />
-                <Button Grid.Column="3" Grid.Row="2" Text="вопрос" />
-                <Button Grid.Column="4" Grid.Row="2" Text="вопрос" />
-                <Button Grid.Column="5" Grid.Row="2" Text="вопрос" />
+                <Border Grid.Column="2" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая планета ближе к Солнцу?|Марс|Венера|Меркурий|Меркурий" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая птица не умеет летать?|Пингвин|Орел|Попугай|Пингвин" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Что помогает самолету держаться в воздухе?|Крылья и скорость|Пропеллер|Магия|Крылья и скорость" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="В какой киновселенной есть джедаи?|Марвел|Звездные войны|Гарри Поттер|Звездные войны" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Кто был первым космонавтом Земли?|Нил Армстронг|Юрий Гагарин|Алексей Леонов|Юрий Гагарин" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
 
-                <Button Grid.Column="1" Grid.Row="3" Text="вопрос" />
-                <Button Grid.Column="2" Grid.Row="3" Text="вопрос" />
-                <Button Grid.Column="3" Grid.Row="3" Text="вопрос" />
-                <Button Grid.Column="4" Grid.Row="3" Text="вопрос" />
-                <Button Grid.Column="5" Grid.Row="3" Text="вопрос" />
+                <Border Grid.Column="3" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая планета самая большая?|Сатурн|Юпитер|Нептун|Юпитер" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Сколько сердец у осьминога?|Одно|Два|Три|Три" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется поезд на магнитной подушке?|Маглев|Сапсан|Монорельс|Маглев" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как зовут зеленого огра из болота?|Шрек|Фиона|Осел|Шрек" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какую страну защищает Великая стена?|Япония|Индия|Китай|Китай" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
 
-                <Button Grid.Column="1" Grid.Row="4" Text="вопрос" />
-                <Button Grid.Column="2" Grid.Row="4" Text="вопрос" />
-                <Button Grid.Column="3" Grid.Row="4" Text="вопрос" />
-                <Button Grid.Column="4" Grid.Row="4" Text="вопрос" />
-                <Button Grid.Column="5" Grid.Row="4" Text="вопрос" />
+                <Border Grid.Column="4" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется наша галактика?|Андромеда|Млечный Путь|Центавра|Млечный Путь" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое млекопитающее самое крупное?|Слон|Синий кит|Кашалот|Синий кит" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая деталь в машине передает крутящий момент?|Радиатор|Карданный вал|Стартер|Карданный вал" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какой фильм собрал первый миллиард в прокате?|Аватар|Титаник|Мстители|Титаник" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="В каком веке открыли Америку?|В 13 веке|В 15 веке|В 17 веке|В 15 веке" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
 
-                <Button Grid.Column="1" Grid.Row="5" Text="вопрос" />
-                <Button Grid.Column="2" Grid.Row="5" Text="вопрос" />
-                <Button Grid.Column="3" Grid.Row="5" Text="вопрос" />
-                <Button Grid.Column="4" Grid.Row="5" Text="вопрос" />
-                <Button Grid.Column="5" Grid.Row="5" Text="вопрос" />
+                <Border Grid.Column="5" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="На какой планете Солнечной системы один день (оборот вокруг оси) длится дольше, чем целый местный год?|Меркурий|Венера|Юпитер|Венера" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое животное спит с открытым глазом?|Дельфин|Акула|Сова|Дельфин" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="В какой стране появился первый пассажирский поезд?|США|Германия|Великобритания|Великобритания" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Режиссер какого фильма Кристофер Нолан?|Интерстеллар|Аватар|Гладиатор|Интерстеллар" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="#512BD4">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая цивилизация придумала олимпийские игры?|Древний Рим|Древняя Греция|Майя|Древняя Греция" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="White" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
             </Grid>
         </VerticalStackLayout>
-        
+
         <Grid x:Name="QuizModal" IsVisible="False" BackgroundColor="#80000000" IgnoreSafeArea="True">
-            <Border StrokeShape="RoundRectangle 15" 
-                    BackgroundColor="White" 
-                    WidthRequest="340" 
-                    MaximumHeightRequest="600"
-                    VerticalOptions="Center" 
-                    HorizontalOptions="Center" 
-                    Padding="20">
+            <Border StrokeShape="RoundRectangle 15" BackgroundColor="White" WidthRequest="340" MaximumHeightRequest="600" VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
                 <ScrollView VerticalScrollBarVisibility="Never">
                     <VerticalStackLayout Spacing="15" VerticalOptions="Center">
-
-                        <Image Source="dotnet_bot.png" 
-                               HeightRequest="140" 
-                               WidthRequest="140"
-                               MaximumHeightRequest="160"
-                               Aspect="AspectFit"
-                               HorizontalOptions="Center"/>
-
-                        <Label Text="Сколько планет в Солнечной системе?" 
-                               FontSize="18" 
-                               FontAttributes="Bold" 
-                               HorizontalTextAlignment="Center" 
-                               TextColor="Black"
-                               Margin="5"
-                               LineBreakMode="WordWrap"/>
-
-                        <Button Text="А) 7 планет" Clicked="OnAnswerClicked" CommandParameter="7 планет" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
-                        <Button Text="Б) 8 планет" Clicked="OnAnswerClicked" CommandParameter="8 планет" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
-                        <Button Text="В) 9 планет" Clicked="OnAnswerClicked" CommandParameter="9 планет" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
-
+                        <Image Source="dotnet_bot.png" HeightRequest="140" WidthRequest="140" Aspect="AspectFit" HorizontalOptions="Center"/>
+                        <Label x:Name="QuestionLabel" Text="Текст вопроса" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black" Margin="5" LineBreakMode="WordWrap"/>
+                        <Button x:Name="AnswerBtnA" Clicked="OnAnswerClicked" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
+                        <Button x:Name="AnswerBtnB" Clicked="OnAnswerClicked" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
+                        <Button x:Name="AnswerBtnC" Clicked="OnAnswerClicked" BackgroundColor="#512BD4" TextColor="White" HeightRequest="45"/>
                     </VerticalStackLayout>
                 </ScrollView>
             </Border>
         </Grid>
-
     </Grid>
 </ContentPage>

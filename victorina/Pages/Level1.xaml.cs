@@ -4,30 +4,69 @@ namespace victorina;
 
 public partial class Level1 : ContentPage
 {
-	public Level1()
-	{
-		InitializeComponent();
-	}
+    private Border _lastClickedQuestionButton;
+    private string _correctAnswer = "";
+
+    public Level1()
+    {
+        InitializeComponent();
+    }
 
     private void OnOpenQuizClicked(object sender, EventArgs e)
     {
-        QuizModal.IsVisible = true;
+        _lastClickedQuestionButton = sender as Border;
+
+        if (_lastClickedQuestionButton?.GestureRecognizers.FirstOrDefault() is TapGestureRecognizer recognizer)
+        {
+            if (recognizer.CommandParameter is string rawData)
+            {
+                string[] parts = rawData.Split('|');
+                if (parts.Length == 5)
+                {
+                    QuestionLabel.Text = parts[0];
+
+                    AnswerBtnA.Text = "А) " + parts[1];
+                    AnswerBtnA.CommandParameter = parts[1];
+
+                    AnswerBtnB.Text = "Б) " + parts[2];
+                    AnswerBtnB.CommandParameter = parts[2];
+
+                    AnswerBtnC.Text = "В) " + parts[3];
+                    AnswerBtnC.CommandParameter = parts[3];
+
+                    _correctAnswer = parts[4];
+
+                    QuizModal.IsVisible = true;
+                }
+            }
+        }
     }
 
     private async void OnAnswerClicked(object sender, EventArgs e)
     {
-        var button = (Button)sender;
-        string selectedAnswer = button.CommandParameter?.ToString() ?? "";
+        var answerButton = (Button)sender;
+        string selectedAnswer = answerButton.CommandParameter?.ToString() ?? "";
 
         QuizModal.IsVisible = false;
 
-        if (selectedAnswer == "8 планет")
+        if (selectedAnswer == _correctAnswer)
         {
-            await DisplayAlertAsync("Правильно!", "Отличный результат!", "Ура");
+            if (_lastClickedQuestionButton != null)
+            {
+                _lastClickedQuestionButton.BackgroundColor = Colors.Green;
+
+                _lastClickedQuestionButton.GestureRecognizers.Clear();
+            }
+            await DisplayAlert("Правильно!", "Отличный результат!", "Ура");
         }
         else
         {
-            await DisplayAlertAsync("Неверно", $"Вы выбрали: {selectedAnswer}.", "ОК");
+            if (_lastClickedQuestionButton != null)
+            {
+                _lastClickedQuestionButton.BackgroundColor = Colors.Red;
+                _lastClickedQuestionButton.GestureRecognizers.Clear();
+            }
+            await DisplayAlert("Неверно", $"Правильный ответ: {_correctAnswer}", "ОК");
         }
     }
 }
