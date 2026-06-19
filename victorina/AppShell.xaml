@@ -5,10 +5,10 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:victorina"
     xmlns:local="clr-namespace:victorina"
-    Title="victorina">
+    Title="Викторина">
 
     <ShellContent
-        Title="Выбери уровень"
+
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
   

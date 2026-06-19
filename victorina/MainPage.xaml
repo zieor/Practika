@@ -2,18 +2,27 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="victorina.MainPage"
-             BackgroundColor="DarkSlateGrey"
+
              >
 
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#000015" Offset="0.0" />
+
+            <GradientStop Color="#1f3f29" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
 
     <VerticalStackLayout Margin="10" VerticalOptions="End">
 
         <Label
             Text="Выбери сложность"
-            TextColor="Red"
+            TextColor="White"
             FontAttributes="Bold"
             HorizontalOptions="Center"
-            Padding="0 0 250 0"
+            Padding="0 0 200 0"
+            FontSize="30"
+            HorizontalTextAlignment="Center"
             ></Label>
         
         
@@ -22,7 +31,7 @@
         <Button
             Text="Уровень 1"
             Clicked="Button_Clicked1"
-            BackgroundColor="Wheat"
+            BackgroundColor="AntiqueWhite"
             TextColor="Black"
             FontAttributes="Bold"
             Margin="0 0 10 0"
@@ -32,7 +41,7 @@
         <Button
             Text="Уровень 2"
             Clicked="Button_Clicked2"
-            BackgroundColor="Wheat"
+            BackgroundColor="AntiqueWhite"
             TextColor="Black"
             FontAttributes="Bold"
             Margin="0 0 10 0"
@@ -41,7 +50,7 @@
         <Button
             Text="Уровень 3"
             Clicked="Button_Clicked3"
-            BackgroundColor="Wheat"
+            BackgroundColor="AntiqueWhite"
             TextColor="Black"
             FontAttributes="Bold"
             Margin="0 0 10 0"
@@ -50,7 +59,7 @@
         <Button
             Text="Уровень 4"
             Clicked="Button_Clicked4"
-            BackgroundColor="Wheat"
+            BackgroundColor="AntiqueWhite"
             TextColor="Black"
             FontAttributes="Bold"
             Margin="0 0 10 0"
@@ -59,7 +68,7 @@
         <Button
             Text="Уровень 5"
             Clicked="Button_Clicked5"
-            BackgroundColor="Wheat"
+            BackgroundColor="AntiqueWhite"
             TextColor="Black"
             FontAttributes="Bold"
 
