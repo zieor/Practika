@@ -217,7 +217,6 @@
             <Border StrokeShape="RoundRectangle 15" BackgroundColor="White" WidthRequest="340" MaximumHeightRequest="600" VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
                 <ScrollView VerticalScrollBarVisibility="Never">
                     <VerticalStackLayout Spacing="15" VerticalOptions="Center">
-                        <Image Source="dotnet_bot.png" HeightRequest="140" WidthRequest="140" Aspect="AspectFit" HorizontalOptions="Center"/>
                         <Label x:Name="QuestionLabel" Text="Текст вопроса" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black" Margin="5" LineBreakMode="WordWrap"/>
                         <Button x:Name="AnswerBtnA" Clicked="OnAnswerClicked" BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>
                         <Button x:Name="AnswerBtnB" Clicked="OnAnswerClicked" BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>

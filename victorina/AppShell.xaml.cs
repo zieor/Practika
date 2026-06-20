@@ -17,6 +17,8 @@ namespace victorina
             Routing.RegisterRoute(nameof(Level4), typeof(Level4));
 
             Routing.RegisterRoute(nameof(Level5), typeof(Level5));
+
+            Routing.RegisterRoute(nameof(Level6), typeof(Level6));
         }
 
     }

@@ -34,6 +34,10 @@ namespace victorina
         {
             await Shell.Current.GoToAsync(nameof(Level5));
         }
+        private async void Button_Clicked6(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(Level6));
+        }
 
 
     }

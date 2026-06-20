@@ -71,9 +71,16 @@
             BackgroundColor="AntiqueWhite"
             TextColor="Black"
             FontAttributes="Bold"
+            Margin="0 0 10 0"
+            />
+        <Button
+            Text="Уровень 6"
+            Clicked="Button_Clicked6"
+            BackgroundColor="AntiqueWhite"
+            TextColor="Black"
+            FontAttributes="Bold"
 
             />
-
 
 
     </VerticalStackLayout>

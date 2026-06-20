@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="victorina.Pages.Level6"
+             Shell.NavBarIsVisible="False" 
+             NavigationPage.HasNavigationBar="False">
+
+
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#000015" Offset="0.0" />
+
+            <GradientStop Color="#1f3f29" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid>
+        <VerticalStackLayout>
+            <Label 
+                Text="ВИКТОРИНА"
+                FontSize="24"
+                FontAttributes="Bold"
+                Margin="0,15,0,0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Grid Margin="10,20,10,0" RowSpacing="5" ColumnSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="85" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Мемология" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Музыка" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Dota 2" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Counter strike 2" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Dark souls" TextColor="White"/>
+
+                <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Тема" TextColor="White"/>
+                <Label Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="100" TextColor="White"/>
+                <Label Grid.Column="2" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="200" TextColor="White"/>
+                <Label Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="300" TextColor="White"/>
+                <Label Grid.Column="4" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="400" TextColor="White"/>
+                <Label Grid.Column="5" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="500" TextColor="White"/>
+
+                <Border Grid.Column="1" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как прозвали мальчика ставшего популярным за счет жеста '6-7'? |67 Kid|Stupid Kid|Kid Z|67 Kid|mem_1.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="2" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется мем, в котором женщина кричит на кота за столом?|Woman Yelling at Cat|Distracted Boyfriend|Two Buttons|Woman Yelling at Cat|mem_2.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="3" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="На каком сайте изначально зародилось большинство классических мемов 2000-х годов, включая Rickroll и Rage Comics?|4chan|Reddit|9GAG|4chan" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="4" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется жанр абсурдных мемов, характеризующийся нейрослопом и сюрреалистичным юмором?|Брейнрот|Данк-мем|Щитпостинг|Брейнрот" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="5" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется мем-феномен, когда контент становится настолько ироничным и многослойным, что теряет изначальный смысл?|Постирония|Метаирония|Антиюмор|Постирония" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+
+                            <Border Grid.Column="1" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая группа исполнила легендарный хит 'Bohemian Rhapsody'?|Queen|The Beatles|Pink Floyd|Queen" />
+                                </Border.GestureRecognizers>
+                                <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                            </Border>
+                            <Border Grid.Column="2" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Кто на картинке?|Курт Кобейн|Юра Борисов|Джо Андерсон|Курт Кобейн|mus_2.png" />
+                                </Border.GestureRecognizers>
+                                <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                            </Border>
+                            <Border Grid.Column="3" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется музыкальный жанр, возникший в конце 1970-х и характеризующийся быстрым темпом и агрессивным звучанием?|Хардкор-панк|Панк-рок|Гранж|Хардкор-панк" />
+                                </Border.GestureRecognizers>
+                                <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                            </Border>
+                            <Border Grid.Column="4" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется техника игры на струнных инструментах, при которой звук извлекается быстрым щипком пальца?|Пиццикато|Тремоло|Глиссандо|Пиццикато" />
+                                </Border.GestureRecognizers>
+                                <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                            </Border>
+                            <Border Grid.Column="5" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                                <Border.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется форма полифонической музыки эпохи Барокко, основанная на имитации главной темы (субъекта)?|Фуга|Соната|Кантата|Фуга" />
+                                </Border.GestureRecognizers>
+                                <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                            </Border>
+
+                <Border Grid.Column="1" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как зовут героя, который может иметь 5 почти идеальных копии?|Meepo|Chen|Visage|Meepo" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="2" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какой предмет делает героя большим и желтым?|Black King Bar|Glimmer Cape|Silver Edge|Black King Bar|dota_2.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="3" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется механика, при которой герой наносит последний удар по крипу, получая золото?|Денай|Ластхит|Крипстак|Ластхит|dota_3.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="4" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какой герой может убить героя под эффектом Shallow Grave?|Widranger|Void Spirit|Axe|Axe|dota_4.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="5" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Под каким эффектом Meepo может использовать аганим если основной не под эффектом этой способности?|Black hole|Winter's Curse|Duel|Winter's Curse|dota_5.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется это место?|Mid|Short|Box|Mid|cs_1.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Сколько урона наносит поподание любой гранатой?|1|10|Не наносит|1" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Сколько длится молотов?|7|8|5|7" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Ник этого игрока?|Simple|Duplo|Gudonk|Simple|cs_5.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Кому посвящено это граффити?|olofmeister|Duplo|Swin|olofmeister|cs_6.png" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая первая локация в Ds2?|Двери фроси|Междумирие|Забытая крепость|Междумирие" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется битва с тремя боссами?|Босс 1 гигант|Гниющий|Страж руин|Страж руин" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется хилка?|Запретная трава|Фляга|Увядшая душа|Фляга" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как зовут босса паука?|Фрея|Гнида|Гибкий часовой|Фрея" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Где прокачивать уровни в Elden ring?|Место благодати|Изумрудный вестник|Стрейд|Место благодати" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+
+        <Grid x:Name="QuizModal" IsVisible="False" BackgroundColor="#80000000" IgnoreSafeArea="True">
+            <Border StrokeShape="RoundRectangle 15" BackgroundColor="White" 
+            WidthRequest="340" MaximumHeightRequest="600" 
+            VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                        <Image x:Name="QuestionImage" 
+                       HeightRequest="160" 
+                       WidthRequest="280" 
+                       Aspect="AspectFit" 
+                       HorizontalOptions="Center"
+                       IsVisible="False"/>
+                        <Label x:Name="QuestionLabel" 
+                       Text="Текст вопроса" 
+                       FontSize="18" 
+                       FontAttributes="Bold" 
+                       HorizontalTextAlignment="Center" 
+                       TextColor="Black" 
+                       Margin="5" 
+                       LineBreakMode="WordWrap"/>
+                        <Button x:Name="AnswerBtnA" Clicked="OnAnswerClicked" 
+                        BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>
+                        <Button x:Name="AnswerBtnB" Clicked="OnAnswerClicked" 
+                        BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>
+                        <Button x:Name="AnswerBtnC" Clicked="OnAnswerClicked" 
+                        BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
+    </Grid>
+</ContentPage>
