@@ -2,11 +2,229 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="victorina.Pages.Level3"
-             Title="Level3">
-    <VerticalStackLayout>
-        <Label 
-            Text="3"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-    </VerticalStackLayout>
+             Shell.NavBarIsVisible="False" 
+             NavigationPage.HasNavigationBar="False">
+
+
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#000015" Offset="0.0" />
+
+            <GradientStop Color="#1f3f29" Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <Grid>
+        <VerticalStackLayout>
+            <Label 
+                Text="ВИКТОРИНА"
+                FontSize="24"
+                FontAttributes="Bold"
+                Margin="0,15,0,0"
+                VerticalOptions="Center" 
+                HorizontalOptions="Center" />
+
+            <Grid Margin="10,20,10,0" RowSpacing="5" ColumnSpacing="5">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                    <RowDefinition Height="100" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="85" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label Grid.Column="0" Grid.Row="1" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Астрофизика" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="2" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Биология" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="3" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="IT &amp; AI" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="4" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Культура" TextColor="White"/>
+                <Label Grid.Column="0" Grid.Row="5" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Мифы" TextColor="White"/>
+
+                <Label Grid.Column="0" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="Тема" TextColor="White"/>
+                <Label Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="100" TextColor="White"/>
+                <Label Grid.Column="2" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="200" TextColor="White"/>
+                <Label Grid.Column="3" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="300" TextColor="White"/>
+                <Label Grid.Column="4" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="400" TextColor="White"/>
+                <Label Grid.Column="5" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" FontAttributes="Bold" Text="500" TextColor="White"/>
+
+                <Border Grid.Column="1" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Что образуется на месте гибели массивных звезд, преодолевших предел Чандрасекара?|Черная дыра|Белый карлик|Красный гигант|Черная дыра" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90"/>
+                </Border>
+                <Border Grid.Column="2" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется гипотетическая граница черной дыры, за которую не может выйти даже свет?|Сфера Шварцшильда|Горизонт событий|Точка сингулярности|Горизонт событий" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая планета-гигант вращается вокруг Солнца «лежа на боку»?|Сатурн|Нептун|Уран|Уран" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая галактика является ближайшей крупной соседкой Млечного Пути?|Андромеда|Большое Магелланово|Треугольник|Андромеда" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="1" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое излучение, оставшееся после Большого взрыва, равномерно заполняет Вселенную?|Реликтовое|Гамма-излучение|Инфракрасное|Реликтовое" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какой органоид клетки отвечает за выработку энергии в виде АТФ?|Рибосома|Митохондрия|Лизосома|Митохондрия" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое вещество придает зеленый цвет листьям растений?|Каротин|Хлорофилл|Меланин|Хлорофилл" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая группа крови считается универсальным донором для всех остальных?|Первая (0)|Вторая (A)|Четвертая (AB)|Первая (0)" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое животное способно выжить в космическом вакууме и при экстремальных температурах?|Тихоходка|Скорпион|Таракан|Тихоходка" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="2" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Сколько пар хромосом содержит соматическая клетка здорового человека?|22 пары|23 пары|24 пары|23 пары" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какой язык программирования использует змею на своем официальном логотипе?|Java|Python|C++|Python" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Что означает буква «S» в безопасном сетевом протоколе HTTPS?|System|Secure|Speed|Secure" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется тест, проверяющий способность ИИ мыслить подобно человеку?|Тест Тьюринга|Тест Шора|Тест Белла|Тест Тьюринга" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая базовая архитектура нейросетей легла в основу современных языковых моделей (LLM)?|Трансформер|Перцептрон|Диффузия|Трансформер" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="3" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое кодовое название носит архитектура квантовых вычислений, основанная на суперпозиции?|Биты|Кубиты|Троичные коды|Кубиты" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какая страна считается исторической родиной классического балета?|Италия|Франция|Россия|Италия" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какой композитор написал знаменитую Симфонию №5 со вступлением «темы судьбы»?|Моцарт|Бах|Бетховен|Бетховен" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как называется традиционное японское искусство аранжировки срезанных цветов?|Икебана|Бонсай|Оригами|Икебана" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="В каком архитектурном стиле построен знаменитый собор Нотр-Дам де Пари?|Романский|Готический|Барокко|Готический" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="4" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какому художнику-сюрреалисту принадлежит картина «Постоянство памяти» с мягкими часами?|Рене Магритт|Сальвадор Дали|Макс Эрнст|Сальвадор Дали" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+
+                <Border Grid.Column="1" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Кто в скандинавской мифологии является верховным богом и отцом Тора?|Локи|Один|Бальдр|Один" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="2" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как в греческой мифологии звали трехголового пса, охранявшего подземное царство Аида?|Цербер|Минотавр|Сфинкс|Цербер" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="3" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое мифическое существо возрождается из собственного пепла?|Грифон|Василиск|Феникс|Феникс" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="4" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Какое оружие, выкованное циклопами, является главным атрибутом бога Зевса?|Тризубец|Молнии|Коса|Молнии" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+                <Border Grid.Column="5" Grid.Row="5" StrokeShape="RoundRectangle 5" BackgroundColor="AntiqueWhite">
+                    <Border.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnOpenQuizClicked" CommandParameter="Как назывался священный напиток богов Олимпа, дарующий им бессмертие?|Нектар|Амброзия|Миро|Амброзия" />
+                    </Border.GestureRecognizers>
+                    <Label Text="вопрос" TextColor="Black" HorizontalOptions="Center" VerticalOptions="Center" Rotation="-90" />
+                </Border>
+            </Grid>
+        </VerticalStackLayout>
+
+        <Grid x:Name="QuizModal" IsVisible="False" BackgroundColor="#80000000" IgnoreSafeArea="True">
+            <Border StrokeShape="RoundRectangle 15" BackgroundColor="White" WidthRequest="340" MaximumHeightRequest="600" VerticalOptions="Center" HorizontalOptions="Center" Padding="20">
+                <ScrollView VerticalScrollBarVisibility="Never">
+                    <VerticalStackLayout Spacing="15" VerticalOptions="Center">
+                        <Image Source="dotnet_bot.png" HeightRequest="140" WidthRequest="140" Aspect="AspectFit" HorizontalOptions="Center"/>
+                        <Label x:Name="QuestionLabel" Text="Текст вопроса" FontSize="18" FontAttributes="Bold" HorizontalTextAlignment="Center" TextColor="Black" Margin="5" LineBreakMode="WordWrap"/>
+                        <Button x:Name="AnswerBtnA" Clicked="OnAnswerClicked" BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>
+                        <Button x:Name="AnswerBtnB" Clicked="OnAnswerClicked" BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>
+                        <Button x:Name="AnswerBtnC" Clicked="OnAnswerClicked" BackgroundColor="AntiqueWhite" TextColor="Black" HeightRequest="45"/>
+                    </VerticalStackLayout>
+                </ScrollView>
+            </Border>
+        </Grid>
+    </Grid>
 </ContentPage>
